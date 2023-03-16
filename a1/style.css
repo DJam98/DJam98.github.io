@@ -1,0 +1,60 @@
+/* FONTS
+
+LIGHT
+
+font-family: "new-order", sans-serif;
+font-weight: 300;
+font-style: normal;
+
+REGULAR
+
+font-family: "new-order", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+MEDIUM
+
+font-family: "new-order", sans-serif;
+font-weight: 500;
+font-style: normal;
+
+
+SEMIBOLD
+
+font-family: "new-order", sans-serif;
+font-weight: 600;
+font-style: normal;
+
+BOLD
+
+font-family: "new-order", sans-serif;
+font-weight: 700;
+font-style: normal; 
+
+*/
+
+ *{
+    font-family: "new-order", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+ }
+
+ html{
+    background-image: linear-gradient(#EFF8FF, #CBE5FF);
+    height: 100%;
+ }
+
+ h1{
+    font-family: "new-order", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+    font-size: 2em;
+ }
+
+ h2{
+    font-family: "new-order", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 1.5em;
+ }
