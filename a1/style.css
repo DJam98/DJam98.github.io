@@ -40,11 +40,6 @@ font-style: normal;
     color: black;
  }
 
- html{
-    background-image: linear-gradient(#EFF8FF, #CBE5FF);
-    height: 100%;
- }
-
  h1{
     font-family: "new-order", sans-serif;
     font-weight: 700;
@@ -58,3 +53,28 @@ font-style: normal;
     font-style: normal;
     font-size: 1.5em;
  }
+
+ header{
+   width: 100vw;
+   background-color: red;
+ }
+
+section{
+   width: 35vw;
+   height: 400px;
+   border-radius: 2vh;
+   background-color: blue;
+   float: left;
+   margin-left: 2.5vw;
+   margin-right: 2.5vw;
+   margin-top: 4vw;
+   margin-bottom: 4vw;
+   padding: 2.5vh;
+}
+
+
+@media only screen and (max-width: 800px) {
+   section{
+      width: 80vw;
+   }
+}
