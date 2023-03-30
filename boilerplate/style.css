@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+}
+
+:root{
+    --col01: '#000000';
+    --col02: '#ffffff';
+    --border: groove 10px ver(var(--col02));
+}
