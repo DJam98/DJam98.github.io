@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-size: 16px;
+    color: white;
+}
+
+/*
+
+:root{
+    --col01: '#000000';  Black 
+    --col02: '#ffffff';  White 
+    --col03: '#f51e05';  Red 
+    --col04: '#7877e6';  Blue 
+    --col05: '#47741b';  Green 
+    --col06: '#ffbcd9';  Pink 
+}
+
+*/
+
+main{
+    height: 177vh;
+    background-color: black;
+    padding: 20px;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    min-width: 0;
+
+    background-color: white;
+    width: 100%;
+}
+
+.up {
+    background-color: red;
+    flex-grow: 1;
+    text-align: center;
+    margin-top: 10%;
+    border-radius: 1em;
+}
+
+.down {
+    background-color: blue;
+    flex-grow: 1;
+    text-align: center;
+    margin-bottom: 10%;
+    border-radius: 1em;
+}
+
+.hero{
+    background-color: green;
+    flex-grow: 1;
+    text-align: center;
+}
