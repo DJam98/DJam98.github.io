@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <script src="./filter.js" defer></script>
-    <!-- <script src="./arrays-&-for-loops.js" defer></script> -->
+    <script src="./arrays-&-for-loops.js" defer></script>
 
     <title>exercise 2</title>
 
@@ -29,6 +29,18 @@
         <button class="FilterButton" onclick='filterCategory("M", this)'>Maangchi</button>
         <button class="FilterButton" onclick='filterCategory("HM", this)'>Hetty McKinnon</button>
         <button class="FilterButton" onclick='filterCategory("CLM", this)'>Carla Lalli Music</button>
+        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Authors</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Type of Food</summary>
+        <button class="FilterButton" onclick='filterCategory("Main", this)'>Mains</button>
+        <button class="FilterButton" onclick='filterCategory("Snack", this)'>Snacks</button>
+        <button class="FilterButton" onclick='filterCategory("Salad", this)'>Salads</button>
+        <button class="FilterButton" onclick='filterCategory("Savoury", this)'>Savouries</button>
+        <button class="FilterButton" onclick='filterCategory("Sweet", this)'>Sweets</button>
+        <button class="FilterButton" onclick='filterCategory("Dessert", this)'>Desserts</button>
+        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Types</button>
       </details>
 
     </div>
@@ -36,7 +48,7 @@
     <hr /> 
 
     <!-- Recipe 1 -->
-    <div class="RecipeBox HM">
+    <div class="RecipeBox HM Main">
 
       <!-- don't forget to change out <div>s for the most appropriate element -->
       <!-- i'll give you one for free - you should change the URL into an <a> tag, don't forget to add the appropriate attributes so it works as a link -->
@@ -87,7 +99,7 @@
     </div>
     
     <!-- Recipe 2 -->
-    <div class="RecipeBox HM">
+    <div class="RecipeBox HM Salad">
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846</div>
 
@@ -135,7 +147,7 @@
     </div>
     
     <!-- Recipe 3 -->
-    <div class="RecipeBox KLA">
+    <div class="RecipeBox KLA Snack Savoury">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe</div>
 
@@ -183,7 +195,7 @@
     </div>
     
     <!-- Recipe 4 -->
-    <div class="RecipeBox M">
+    <div class="RecipeBox M Snack Sweet">
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/jjinppang</div>
 
@@ -230,7 +242,7 @@
     </div>
     
     <!-- Recipe 5 -->
-    <div class="RecipeBox KLA">
+    <div class="RecipeBox KLA Snack Sweet">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe</div>
 
@@ -276,7 +288,7 @@
     </div>
     
     <!-- Recipe 6 -->
-    <div class="RecipeBox KLA">
+    <div class="RecipeBox KLA Snack Savoury">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe</div>
 
@@ -324,7 +336,7 @@
     </div>
     
     <!-- Recipe 7 -->
-    <div class="RecipeBox CLM">
+    <div class="RecipeBox CLM Main">
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-hands-off-60369279</div>
 
@@ -371,7 +383,7 @@
     </div>
     
     <!-- Recipe 8 -->
-    <div class="RecipeBox M">
+    <div class="RecipeBox M Snack Savoury">
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/kimchijeon</div>
 
@@ -417,7 +429,7 @@
     </div>
     
     <!-- Recipe 9 -->
-    <div class="RecipeBox KLA">
+    <div class="RecipeBox KLA Main">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe</div>
 
@@ -463,7 +475,7 @@
     </div>
     
     <!-- Recipe 10 -->
-    <div class="RecipeBox CLM">
+    <div class="RecipeBox CLM Main">
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/pasta-with-sauce-45042575</div>
 
@@ -509,7 +521,7 @@
     </div>
     
     <!-- Recipe 11 -->
-    <div class="RecipeBox M">
+    <div class="RecipeBox M Main">
 
       <div class="RecipeLink">URL: https://www.maangchi.com/recipe/yangnyeom-tongdak</div>
 
@@ -557,7 +569,7 @@
     </div>
     
     <!-- Recipe 12 -->
-    <div class="RecipeBox KLA">
+    <div class="RecipeBox KLA Main">
 
       <div class="RecipeLink">URL: https://www.seriouseats.com/ultimate-beef-stroganof-recipe</div>
 
@@ -605,7 +617,7 @@
     </div>
     
     <!-- Recipe 13 -->
-    <div class="RecipeBox CLM">
+    <div class="RecipeBox CLM Dessert">
 
       <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-vanilla-60100711</div>
 
@@ -653,7 +665,7 @@
     </div>
 
     <!-- Recipe 14 -->
-    <div class="RecipeBox HM">
+    <div class="RecipeBox HM Main">
 
       <div class="RecipeLink">URL: https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392</div>
 
