@@ -43,7 +43,7 @@ Change font-style to italics
 body{
   display: flex;
   flex-direction: column;
-  background-color: var(--teal-950);
+  background-color: var(--teal-500);
   color: white;
   padding: 2vw;
 
@@ -71,40 +71,64 @@ h1 {
   flex properties here on the container or on the individual flex items depending on how you want to style them
 */
 
+
 main{
   display: flex;
   flex-wrap: wrap;
   gap: 3em;
+  justify-content: space-evenly;
+  
 }
 
 .RecipeBox{
   display: flex;
   flex-direction: column;
-  border: 5px solid white;
   border-radius: 5px;
   padding: 10px;
   margin-top: 1em;
-
-  width: 600px;
+  background-color: var(--teal-900);
+  gap: 0.25em;
+  width: 700px;
+  box-shadow: 10px 10px 40px var(--teal-950);
 }
 
 .FilterSection{
-
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .FilterBox{
-
+  margin: 5px;
+  font-weight: 500;
 }
 
 .FilterButton{
+  background-color: var(--teal-600);
+  color: white;
+  height: 2em;
+  width: fit-content;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 1em;
+  margin-top: 0.5em;
+  border: none;
+}
+
+.FilterButton:hover{
+
+  background-color: var(--teal-700);
+  color: white;
 
 }
 
 .SelectedFilter{
-  
+  background-color: var(--teal-800);
 }
 
-.RecipeLink{
+.RecipeLink {
 
     background-color: var(--teal-600);
     color: white;
@@ -134,19 +158,22 @@ main{
   font-weight: 500;
 }
 
-.Author{
-  margin-top: 0.5em;
-}
+
 
 .RecipeImageContainer{
 
-  width: 20%;
+  width: 100%;
 
 }
 
 .RecipeImg{
 
-  width: 100%;
+  width: 40%;
+  border-radius: 10px;
+
+}
+
+.Author{
 
 }
 
@@ -155,43 +182,34 @@ main{
 }
 
 .Publisher{
-  margin-top: 0.5em;
+
 }
 
 .Cuisine{
-  margin-top: 0.5em;
 }
 
 .TimeToCook{
-  margin-top: 0.5em;
 }
 
 .SkillLevel{
-  margin-top: 0.5em;
 }
 
 .Course{
-  margin-top: 0.5em;
 }
 
 .Servings{
-  margin-top: 0.5em;
 }
 
 .Dietary{
-  margin-top: 0.5em;
 }
 
 .DatePublished{
-  margin-top: 0.5em;
 }
 
 .DateUpdated{
-  margin-top: 0.5em;
 }
 
 .SpecialEquipment{
-  margin-top: 0.5em;
 }
 
 /* 
