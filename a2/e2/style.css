@@ -1,5 +1,19 @@
 /* z-index order */
 
+/*
+FONTS 
+
+font-family: "elza", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Weights
+300, 400, 500, 600, 700, 900
+
+Change font-style to italics
+
+*/
+
 *{
   box-sizing: border-box;
   background-origin: border-box;
@@ -10,19 +24,31 @@
 /* https://lospec.com/palette-list/1bit-monitor-glow */
 /* you're welcome to change the colours if you want or any of the other general page style */
 :root{
-  --col-01:#222323;
-  --col-02:#f0f6f0;
-  --col-03:#5252ff;
-  --col-04:#b6e878;
-  --border: 1px solid var(--col-02);
+  --teal-50: #f0fdfa;
+  --teal-100: #ccfbf1;
+  --teal-200: #99f6e4;
+  --teal-300: #5eead4;
+  --teal-400: #2dd4bf;
+  --teal-500: #14b8a6;
+  --teal-600: #0d9488;
+  --teal-700: #0f766e;
+  --teal-800: #115e59;
+  --teal-900: #134e4a;
+  --teal-950: #042f2e;
+  
+  --border: 1px solid #b6e878;
 }
 
 body{
   display: flex;
   flex-direction: column;
-  background-color: var(--col-01);
-  color: var(--col-02);
+  background-color: var(--teal-950);
+  color: white;
   padding: 2vw;
+
+  font-family: "elza", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /*
@@ -32,7 +58,9 @@ body{
 .RecipeBox{
   display: flex;
   flex-direction: column;
-  border: var(--border);
+  border: 5px solid white;
+  border-radius: 5px;
+  padding: 10px;
 }
 
 .FilterSection{
@@ -65,9 +93,13 @@ body{
 
 .RecipeImageContainer{
 
+  width: 20%;
+
 }
 
 .RecipeImg{
+
+  width: 100%;
 
 }
 
@@ -115,3 +147,17 @@ body{
 
 }
 
+/* 
+
+FONTS 
+
+font-family: "elza", sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Weights
+300, 400, 500, 600, 700, 900
+
+Change font-style to italics
+
+*/

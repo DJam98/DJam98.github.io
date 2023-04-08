@@ -13,11 +13,13 @@
 
     <title>exercise 2</title>
 
+    <link rel="stylesheet" href="https://use.typekit.net/qwi2sil.css">
+
   </head>
 
   <body>
 
-    <div>Interactive Media 1 Recipe List</div>
+    <div><h1>Interactive Media 1 Recipe List</h1></div>
 
     <hr /> 
 
@@ -25,11 +27,53 @@
 
       <details class="FilterBox">
         <summary>Author</summary>
+        <button class="FilterButton" onclick='filterCategory("CLM", this)'>Carla Lalli Music</button>
+        <button class="FilterButton" onclick='filterCategory("HM", this)'>Hetty McKinnon</button>
         <button class="FilterButton" onclick='filterCategory("KLA", this)'>J. Kenji López-Alt</button>
         <button class="FilterButton" onclick='filterCategory("M", this)'>Maangchi</button>
-        <button class="FilterButton" onclick='filterCategory("HM", this)'>Hetty McKinnon</button>
-        <button class="FilterButton" onclick='filterCategory("CLM", this)'>Carla Lalli Music</button>
-        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Authors</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Publisher</summary>
+        <button class="FilterButton" onclick='filterCategory("ABC", this)'>ABC Everyday</button>
+        <button class="FilterButton" onclick='filterCategory("Carla", this)'>Carla Lalli Music</button>
+        <button class="FilterButton" onclick='filterCategory("Maangchi", this)'>Maangchi</button>
+        <button class="FilterButton" onclick='filterCategory("Serious", this)'>Serious Eats</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Cuisine</summary>
+        <button class="FilterButton" onclick='filterCategory("American", this)'>American</button>
+        <button class="FilterButton" onclick='filterCategory("French", this)'>French</button>
+        <button class="FilterButton" onclick='filterCategory("Italian", this)'>Italian</button>
+        <button class="FilterButton" onclick='filterCategory("Korean", this)'>Korean</button>
+        <button class="FilterButton" onclick='filterCategory("NorthAfrican", this)'>North African</button>
+        <button class="FilterButton" onclick='filterCategory("Western", this)'>Western</button>
+        <button class="FilterButton" onclick='filterCategory("Russian", this)'>Russian</button>
+        <button class="FilterButton" onclick='filterCategory("Fusion", this)'>Fusion</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Cook Time</summary>
+        <button class="FilterButton" onclick='filterCategory("30", this)'>30 Minutes or Less</button>
+        <button class="FilterButton" onclick='filterCategory("60", this)'>30-60 Minutes</button>
+        <button class="FilterButton" onclick='filterCategory("90", this)'>60-90 Minutes</button>
+        <button class="FilterButton" onclick='filterCategory("180", this)'>90-180 Minutes</button>
+        <button class="FilterButton" onclick='filterCategory("Day", this)'>6+ Hours</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Skill Level</summary>
+        <button class="FilterButton" onclick='filterCategory("Low", this)'>Low</button>
+        <button class="FilterButton" onclick='filterCategory("Medium", this)'>Medium</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Servings</summary>
+        <button class="FilterButton" onclick='filterCategory("2", this)'>1-2 Servings</button>
+        <button class="FilterButton" onclick='filterCategory("4", this)'>3-4 Servings</button>
+        <button class="FilterButton" onclick='filterCategory("8", this)'>5-8 Servings</button>
+        <button class="FilterButton" onclick='filterCategory("Other", this)'>Other</button>
       </details>
 
       <details class="FilterBox">
@@ -40,21 +84,44 @@
         <button class="FilterButton" onclick='filterCategory("Savoury", this)'>Savouries</button>
         <button class="FilterButton" onclick='filterCategory("Sweet", this)'>Sweets</button>
         <button class="FilterButton" onclick='filterCategory("Dessert", this)'>Desserts</button>
-        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>All Types</button>
       </details>
+
+      <details class="FilterBox">
+        <summary>Dietary Options</summary>
+        <button class="FilterButton" onclick='filterCategory("Veg", this)'>Vegetarian</button>
+        <button class="FilterButton" onclick='filterCategory("Fish", this)'>Pescatarian</button>
+        <button class="FilterButton" onclick='filterCategory("Meat", this)'>Meat Based</button>
+        <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>None</button>
+      </details>
+
+      <details class="FilterBox">
+        <summary>Last Updated</summary>
+        <button class="FilterButton" onclick='filterCategory("2018", this)'>2018</button>
+        <button class="FilterButton" onclick='filterCategory("2019", this)'>2019</button>
+        <button class="FilterButton" onclick='filterCategory("2020", this)'>2020</button>
+        <button class="FilterButton" onclick='filterCategory("2021", this)'>2021</button>
+        <button class="FilterButton" onclick='filterCategory("2022", this)'>2022</button>
+      </details>
+  
+      <details class="FilterBox">
+        <summary>Special Equipment Required</summary>
+        <button class="FilterButton" onclick='filterCategory("Yes", this)'>Yes</button>
+        <button class="FilterButton" onclick='filterCategory("No", this)'>No</button>
+      </details>
+
+      <button class="FilterButton" onclick='filterCategory("RecipeBox", this)'>Reset Filters</button>
 
     </div>
 
     <hr /> 
 
     <!-- Recipe 1 -->
-    <div class="RecipeBox HM Main">
+    <div class="RecipeBox HM Main Veg Italian 60 ABC Low 8 2019 Yes">
 
       <!-- don't forget to change out <div>s for the most appropriate element -->
       <!-- i'll give you one for free - you should change the URL into an <a> tag, don't forget to add the appropriate attributes so it works as a link -->
-      <div class="RecipeLink">URL: https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338</div>
 
-      <div class="RecipeName">Recipe Name: Baked Puttanesca Risotto with Olives, Lemon and Parsley</div>
+      <div class="RecipeName"><h2>Baked Puttanesca Risotto with Olives, Lemon and Parsley</h2></div>
 
       <div class="Author">Author: Hetty Mckinnon</div>
       
@@ -96,12 +163,12 @@
 
       <div class="SpecialEquipment">Special Equipment: Ovenproof Dutch oven</div>
 
+      <div class="RecipeLink"><a href = "https://www.abc.net.au/everyday/baked-puttanesca-risotto-with-tomato-olives-lemon-parsley-recipe/11270338">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 2 -->
-    <div class="RecipeBox HM Salad">
-
-      <div class="RecipeLink">URL: https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846</div>
+    <div class="RecipeBox HM Salad Veg Italian 180 ABC Low Other 2020 No">
 
       <div class="RecipeName">Recipe Name: Caprese Salad with Slow-Roasted Tomatoes, Rocket and Basil Gremolata</div>
 
@@ -144,12 +211,12 @@
 
       <div class="SpecialEquipment">Special Equipment: N/A</div>
 
+      <div class="RecipeLink"><a href = "https://www.abc.net.au/everyday/caprese-salad-slow-roasted-tomato-rocket-basil-gremolata-recipe/10776846">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 3 -->
-    <div class="RecipeBox KLA Snack Savoury">
-
-      <div class="RecipeLink">URL: https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe</div>
+    <div class="RecipeBox KLA Snack Savoury Veg Fusion 30 Serious Medium 8 2018 No">
 
       <div class="RecipeName">Recipe Name: Crispy Enoki and Onion Fritters with Thai Curry Mayo Recipe</div>
 
@@ -192,12 +259,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.seriouseats.com/crispy-enoki-and-onion-fritter-with-thai-curry-mayo-recipe">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 4 -->
-    <div class="RecipeBox M Snack Sweet">
-
-      <div class="RecipeLink">URL: https://www.maangchi.com/recipe/jjinppang</div>
+    <div class="RecipeBox M Snack Sweet Veg Korean Day Maangchi Medium Other 2021 No">
 
       <div class="RecipeName">Recipe Name: Fluffy Steamed Buns filled with Sweet Red Beans</div>
 
@@ -239,12 +306,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.maangchi.com/recipe/jjinppang">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 5 -->
-    <div class="RecipeBox KLA Snack Sweet">
-
-      <div class="RecipeLink">URL: https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe</div>
+    <div class="RecipeBox KLA Snack Sweet Veg Western 90 Serious Low Other 2022 No">
 
       <div class="RecipeName">Recipe Name: The Food Lab's Chocolate Chip Cookies</div>
 
@@ -285,12 +352,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.seriouseats.com/the-food-lab-best-chocolate-chip-cookie-recipe">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 6 -->
-    <div class="RecipeBox KLA Snack Savoury">
-
-      <div class="RecipeLink">URL: https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe</div>
+    <div class="RecipeBox KLA Snack Savoury Veg Fusion 30 Serious Low 2 2022 No">
 
       <div class="RecipeName">Recipe Name: Grilled Cheese With Kimchi Recipe</div>
 
@@ -333,12 +400,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.seriouseats.com/grilled-cheese-with-kimchi-recipe">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 7 -->
-    <div class="RecipeBox CLM Main">
-
-      <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-hands-off-60369279</div>
+    <div class="RecipeBox CLM Main Meat American Day Carla Medium 8 2021 No">
 
       <div class="RecipeName">Recipe Name: Hands-Off Pork and Beans</div>
 
@@ -380,12 +447,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.patreon.com/posts/recipe-hands-off-60369279">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 8 -->
-    <div class="RecipeBox M Snack Savoury">
-
-      <div class="RecipeLink">URL: https://www.maangchi.com/recipe/kimchijeon</div>
+    <div class="RecipeBox M Snack Savoury Veg Korean 30 Maangchi Low Other 2021 No">
 
       <div class="RecipeName">Recipe Name: Kimchi Pancake</div>
 
@@ -426,12 +493,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.maangchi.com/recipe/kimchijeon">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 9 -->
-    <div class="RecipeBox KLA Main">
-
-      <div class="RecipeLink">URL: https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe</div>
+    <div class="RecipeBox KLA Main Veg NorthAfrican 60 Serious Medium 8 2022 No">
 
       <div class="RecipeName">Recipe Name: Shakshuka (North African–Style Poached Eggs in Spicy Tomato Sauce)</div>
 
@@ -472,12 +539,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.seriouseats.com/shakshuka-north-african-shirred-eggs-tomato-pepper-recipe">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 10 -->
-    <div class="RecipeBox CLM Main">
-
-      <div class="RecipeLink">URL: https://www.patreon.com/posts/pasta-with-sauce-45042575</div>
+    <div class="RecipeBox CLM Main Fish Italian 90 Carla Low 4 2020 No">
 
       <div class="RecipeName">Recipe Name: Spaghetti with Melted Cauliflower Sauce</div>
 
@@ -518,12 +585,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.patreon.com/posts/pasta-with-sauce-45042575">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 11 -->
-    <div class="RecipeBox M Main">
-
-      <div class="RecipeLink">URL: https://www.maangchi.com/recipe/yangnyeom-tongdak</div>
+    <div class="RecipeBox M Main Meat Korean 60 Maangchi Medium 4 2021 No">
 
       <div class="RecipeName">Recipe Name: Sweet, Sour, & Spicy Korean Fried Chicken</div>
 
@@ -565,13 +632,13 @@
       <div class="DateUpdated">Date Updated: August 3, 2021</div>
 
       <div class="SpecialEquipment">Special Equipment: </div>
+      
+      <div class="RecipeLink"><a href = "https://www.maangchi.com/recipe/yangnyeom-tongdak">Go To Recipe</a></div>
 
     </div>
     
     <!-- Recipe 12 -->
-    <div class="RecipeBox KLA Main">
-
-      <div class="RecipeLink">URL: https://www.seriouseats.com/ultimate-beef-stroganof-recipe</div>
+    <div class="RecipeBox KLA Main Meat Russian 60 Serious Medium 4 2020 No">
 
       <div class="RecipeName">Recipe Name: The Ultimate Beef Stroganoff Recipe</div>
 
@@ -614,12 +681,12 @@
 
       <div class="SpecialEquipment">Special Equipment: </div>
 
+      <div class="RecipeLink"><a href = "https://www.seriouseats.com/ultimate-beef-stroganof-recipe">Go To Recipe</a></div>
+
     </div>
     
     <!-- Recipe 13 -->
-    <div class="RecipeBox CLM Dessert">
-
-      <div class="RecipeLink">URL: https://www.patreon.com/posts/recipe-vanilla-60100711</div>
+    <div class="RecipeBox CLM Dessert Veg French 180 Carla Medium 8 2021 Yes">
 
       <div class="RecipeName">Recipe Name: Vanilla-Brown Butter Pear Tart</div>
 
@@ -662,12 +729,12 @@
 
       <div class="SpecialEquipment">Special Equipment: Bench scraper, tart pan</div>
 
+      <div class="RecipeLink"><a href = "https://www.patreon.com/posts/recipe-vanilla-60100711">Go To Recipe</a></div>
+
     </div>
 
     <!-- Recipe 14 -->
-    <div class="RecipeBox HM Main">
-
-      <div class="RecipeLink">URL: https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392</div>
+    <div class="RecipeBox HM Main Veg Fusion 30 ABC Low 4 2021 No">
 
       <div class="RecipeName">Recipe Name: Vegetarian Carbonara with Mushrooms, Miso and Parmesan</div>
 
@@ -708,6 +775,8 @@
       <div class="DateUpdated">Date Updated: 26 Feb 2021</div>
 
       <div class="SpecialEquipment">Special Equipment: </div>
+
+      <div class="RecipeLink"><a href = "https://www.abc.net.au/everyday/vegetarian-carbonara-with-mushrooms-and-miso/12426392">Go To Recipe</a></div>
 
     </div>
 
