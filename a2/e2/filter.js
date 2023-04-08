@@ -14,7 +14,7 @@ function filterCategory(filterBy, buttonClicked){
     // we're setting its display to block, otherwise if it doesn't have the class we're looking for we're going to hide it 
     // by setting the display to none
     if(listItem.classList.contains(filterBy)){
-      listItem.style.display = "flex";
+      listItem.style.display = "flex"; // Changed this to flex instead of block because it overrode a style decision I put in the CSS
     } else {
       listItem.style.display = "none";
     }

@@ -21,9 +21,7 @@ Change font-style to italics
   overflow-x: hidden;
 }
 
-/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
-/* https://lospec.com/palette-list/1bit-monitor-glow */
-/* you're welcome to change the colours if you want or any of the other general page style */
+/* Monochromatic colour scheme. Wanted to have to have the colour scheme stay green as it's a relaxing colour.*/
 :root{
   --teal-50: #f0fdfa;
   --teal-100: #ccfbf1;
@@ -52,6 +50,8 @@ body{
   font-style: normal;
 }
 
+  /* Had to change the default 'a' tag since it didn't work with the green colour scheme */ 
+
 a {
   color: var(--teal-300);
   text-decoration: none;
@@ -67,10 +67,8 @@ h1 {
 }
 
 /*
-  i've set up a basic flexbox for each recipe container - you might want to change some of the 
-  flex properties here on the container or on the individual flex items depending on how you want to style them
+  I wanted to have the recipe list display in a way that would remain consist no matter what filters where applied, and setting a flex filter worked the best. Pretty much all of the rest of the formatting is allowing the flex to work and look aesthetic.
 */
-
 
 main{
   display: flex;
@@ -105,7 +103,9 @@ main{
   font-weight: 500;
 }
 
-.FilterButton{
+/* Wanted to have a buttonn look that kept in the with the style of the rest of the site. Same applies to other buttons that were used */
+
+.FilterButton{ 
   background-color: var(--teal-600);
   color: white;
   height: 2em;
@@ -172,57 +172,3 @@ main{
   border-radius: 10px;
 
 }
-
-.Author{
-
-}
-
-.Attribution{
-
-}
-
-.Publisher{
-
-}
-
-.Cuisine{
-}
-
-.TimeToCook{
-}
-
-.SkillLevel{
-}
-
-.Course{
-}
-
-.Servings{
-}
-
-.Dietary{
-}
-
-.DatePublished{
-}
-
-.DateUpdated{
-}
-
-.SpecialEquipment{
-}
-
-/* 
-
-FONTS 
-
-font-family: "elza", sans-serif;
-font-weight: 400;
-font-style: normal;
-
-Weights
-300, 400, 500, 600, 700, 900
-
-Change font-style to italics
-
-*/
