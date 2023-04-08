@@ -18,6 +18,7 @@ Change font-style to italics
   box-sizing: border-box;
   background-origin: border-box;
   margin: 0;
+  overflow-x: hidden;
 }
 
 /* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
@@ -56,11 +57,7 @@ a {
   text-decoration: none;
 }
 
-a:hover{
-  color: var(--teal-600);
-}
-
-a:visited a:active{
+a:visited a:active a:hover{
   color: inherit;
 }
 
@@ -73,12 +70,22 @@ h1 {
   i've set up a basic flexbox for each recipe container - you might want to change some of the 
   flex properties here on the container or on the individual flex items depending on how you want to style them
 */
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3em;
+}
+
 .RecipeBox{
   display: flex;
   flex-direction: column;
   border: 5px solid white;
   border-radius: 5px;
   padding: 10px;
+  margin-top: 1em;
+
+  width: 600px;
 }
 
 .FilterSection{
@@ -99,6 +106,20 @@ h1 {
 
 .RecipeLink{
 
+    background-color: var(--teal-600);
+    color: white;
+    height: 2em;
+    width: fit-content;
+    padding: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 1em;
+    margin-top: 0.5em;
+}
+
+.RecipeLink:hover {
+  background-color: var(--teal-500);
+  color: white;
 }
 
 .RecipeName{
@@ -108,8 +129,13 @@ h1 {
 
 }
 
-.Author{
+.link{
+  color: white;
+  font-weight: 500;
+}
 
+.Author{
+  margin-top: 0.5em;
 }
 
 .RecipeImageContainer{
@@ -129,43 +155,43 @@ h1 {
 }
 
 .Publisher{
-
+  margin-top: 0.5em;
 }
 
 .Cuisine{
-
+  margin-top: 0.5em;
 }
 
 .TimeToCook{
-
+  margin-top: 0.5em;
 }
 
 .SkillLevel{
-
+  margin-top: 0.5em;
 }
 
 .Course{
-
+  margin-top: 0.5em;
 }
 
 .Servings{
-
+  margin-top: 0.5em;
 }
 
 .Dietary{
-
+  margin-top: 0.5em;
 }
 
 .DatePublished{
-
+  margin-top: 0.5em;
 }
 
 .DateUpdated{
-
+  margin-top: 0.5em;
 }
 
 .SpecialEquipment{
-
+  margin-top: 0.5em;
 }
 
 /* 
