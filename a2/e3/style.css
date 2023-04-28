@@ -112,7 +112,14 @@ li ul{
   line-height: 1rem;
   background-color: transparent;
   border: 0;
+  cursor: pointer;
 }
+
+#load-link:hover {
+  animation: buttonHover 1s;
+  background-color: var(--col-04);
+}
+
 /* throbber while page is fake loading */
 #load-throbber{
   /* the width, height and background-color give it a shape on the page without any content inside - 
@@ -156,5 +163,15 @@ li ul{
 @media (prefers-reduced-motion) {
   :root{
     scroll-behavior: auto;
+  }
+}
+
+@keyframes buttonHover {
+  0% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: var(--col-04);
   }
 }

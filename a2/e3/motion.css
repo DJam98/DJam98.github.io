@@ -19,6 +19,14 @@
 
 #transition-example-1:hover{
   background-color: red;
+  color: aqua;
+  transition: background-color 2s, color 1s;
+}
+
+#transition-example-2:hover{
+  background-color: brown;
+  color: blueviolet;
+  transition: background-color 5s, color 3s;
 }
 
 #animation-container{
@@ -26,23 +34,34 @@
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
 }
 
 .animationExample{
   height: 8rem;
   background-color: blue;
   flex-grow: 1;
+  animation: cycleColour 4s infinite;
+
 }
 
 @keyframes cycleColour {
   0% {
     background-color: blue;
   }
-  50% {
+  25% {
     background-color: greenyellow;
   }
-  100% {
-  background-color: crimson;
+  50% {
+   background-color: crimson;
+  }
+
+  75% {
+    background-color: greenyellow;
+  }
+
+  100%{
+    background-color: blue;
   }
 }
 
