@@ -7,18 +7,41 @@
   box-sizing: border-box;
   background-origin: border-box;
   margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 :root{
   /* first two colours come from Kuroi's Manga Pallete Palette */
   /* https://lospec.com/palette-list/manga-pallete */
-  --col-01:#171219;
-  --col-02:#f2fbeb;
-  --col-03:#5252ff;
-  --col-04:#b6e878;
+
+/* Changed up the colour palette to work more cohesively, particularly with light and dark modes. */
+
+  --col-01:#1d2034;
+  --col-02: #eaebf4;
+  --col-03: #7686ba;
+  --col-04:#36406e;
   font-size: 16px;
   /* scroll behaviour makes the <a> links to ids scroll to position over time rather than immediately */
   scroll-behavior: smooth;
+}
+
+a:active{
+  color: var(--col-03);
+  text-decoration: none;
+}
+a:visited{
+  color: var(--col-03);
+  text-decoration: none;
+
+}
+a:link{
+  color: var(--col-03);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--col-4);
+  text-decoration: underline;
 }
 
 body{
@@ -27,12 +50,42 @@ body{
   color: var(--col-01);
 }
 
+/* I changed the navigation from a list to a flex div, as I think having it as a verticle list used up too much space, plus having the list be in divs allowed for an easier usage when doing the hover animation */
+
 nav {
   margin-top: 1rem;
+  display: flex;
+  color: var(--col-01);
+  gap: 1rem;
 }
 
-nav li{
+nav a:active{
+  color: var(--col-01);
+  text-decoration: none;
+}
+
+nav a:link{
+  color: var(--col-01);
+  text-decoration: none;
+}
+
+nav a:visited{
+  color: var(--col-01);
+  text-decoration: none;
+}
+
+.nav{
   font-size: 1rem;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 0.3rem;
+  padding: 0.3rem;
+  text-decoration: none;
+} 
+
+.nav:hover{
+  animation: buttonHover 1s;
+  background-color: var(--col-03);
 }
 
 section{
@@ -41,10 +94,12 @@ section{
 
 h1{
   font-size: 3rem;
+  font-weight: 900;
 }
 
 h2{
   font-size: 2rem;
+  font-weight: 700;
 }
 
 p{
@@ -96,6 +151,17 @@ li ul{
   /* note the use of position: sticky to keep the button on the page even with scrolling */
   position: sticky;
   top: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  padding-left: 0.6rem;
+  padding-right: 0.6rem;
+}
+
+#mode-button:hover{
+  animation: buttonHover 1s;
+  background-color: var(--col-03);
 }
 
 /* code for loading page */
@@ -113,22 +179,67 @@ li ul{
   background-color: transparent;
   border: 0;
   cursor: pointer;
+  border-radius: 0.3rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 #load-link:hover {
   animation: buttonHover 1s;
-  background-color: var(--col-04);
+  background-color: var(--col-03);
 }
 
 /* throbber while page is fake loading */
 #load-throbber{
   /* the width, height and background-color give it a shape on the page without any content inside - 
   these value are arbitrary, please change to create your own design  */
-  width: 25%;
-  height: 1rem;
+  width: 35%;
+  height: 1.5rem;
   background-color: var(--col-03);
   /* we also initially set display to none so it only shows once the link is clicked */
   display: none;
+  border-radius: 1rem;
+}
+
+.imgContainer{
+  overflow-x: hidden;
+  background-color: transparent;
+  height: 1.5rem;
+  border-radius: 1rem;
+}
+
+.sliding{
+  background: url("iconLoad.png") repeat-x;
+  height: 200px;
+  width: 2000px;
+  background-size: 15rem 1.5rem;
+  animation: slide 30s linear infinite;
+}
+
+#topButton{
+    line-height: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+    background-color: var(--col-02);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.3rem;
+    border-color: var(--col-01);
+    color: var(--col-01);
+  }
+  
+  #topButton:hover {
+    animation: buttonHover 1s;
+    background-color: var(--col-03);
+  }
+
+@keyframes slide {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-1000px, 0, 0)
+  }
 }
 
 /* Media Queries */
@@ -172,6 +283,6 @@ li ul{
   }
 
   100% {
-    background-color: var(--col-04);
+    background-color: var(--col-03);
   }
 }

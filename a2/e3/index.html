@@ -24,6 +24,10 @@
 
     <script src="./fakeLoad.js" defer></script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
   </head>
 
   <body id="load-body">
@@ -43,7 +47,18 @@
         called <progress> but as this one is just indicating a wait rather than providing direct feedback on progress I've 
         opted for using a <div>.
       -->
-      <div id="load-throbber"></div>
+
+      <!--
+
+              The purpose of adding the two extra divs below was to allow the animation of the loading elements to work, as without a propper container and it's own background element, the system did not work. 
+
+      -->
+
+      <div id="load-throbber">
+        <div class="imgContainer">
+          <div class="sliding"></div>
+        </div>
+      </div>
 
   </body>
 
