@@ -78,6 +78,14 @@
   background-image: url('./icons/play.svg');
 }
 
+#muteButton{
+  background-image: url('./icons/mute.svg');
+}
+
+#timeContainer{
+  width: 5rem;
+}
+
 .video-progress-bar{
   /* Reset the default appearance */
   -webkit-appearance: none;

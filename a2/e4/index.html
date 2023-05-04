@@ -28,9 +28,13 @@
       <!-- this element holds all of the custom controls -->
       <div class="video-controls-wrapper" id="controlsWrapper">
 
-        <button class="video-control-button" id="playButton"></button>
+        <button class="video-control-button" id="playButton"></button> <!-- Play Button -->
 
-        <progress class="video-progress-bar" id="progressBar" value="0"></progress>
+        <button class="video-control-button" id="muteButton"></button> <!-- Mute Button -->
+
+        <progress class="video-progress-bar" id="progressBar" value="0"></progress> <!-- Progress Bar -->
+
+        <div id="timeContainer"><span id="currentMinute">0</span>:<span id="currentSecond">00</span> / <span id="fullMinute"></span>:<span id="fullSecond"></span></div>
 
       </div>
 

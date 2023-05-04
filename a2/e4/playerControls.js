@@ -6,8 +6,16 @@ let videoElement = document.getElementById("videoElement");
 // the buttons for the controls
 let playButton = document.getElementById("playButton");
 let stopButton = document.getElementById("stopButton");
+let muteButton = document.getElementById("muteButton");
 // the progress element
 let progressBar = document.getElementById("progressBar");
+
+let fullTimeSeconds = 0;
+let fullTimeMinutes = 0;
+let currentTimeSeconds = 0;
+let currentTimeMinutes = 0;
+
+
 
 // next we remove the controls attribute - we do this with JS rather than just not including it in the HTML tag as a fallback
 // this way if the JS doesn't load for whatever reason the player will have the default built in controls
@@ -20,7 +28,22 @@ document.getElementById("controlsWrapper").style.display = "flex";
 // i'm using an arrow function here that updates the progress element's max attribute with the duration of the media
 // this way when it comes to setting the progress bars value the number matches a percentage of the total duration
 videoElement.addEventListener('loadedmetadata', () => {
-  progressBar.setAttribute('max', videoElement.duration);
+  progressBar.setAttribute('max', videoElement.duration);  
+
+  fullTimeMinutes = Math.floor(videoElement.duration / 60); // Obtain the full time from the video element, then converting it from seconds to minutes.
+  fullTimeSeconds = Math.round(videoElement.duration) - fullTimeMinutes*60; // Obtain the full time, round it so there aren't decimals, then subtact the extra values so that the seconds don't exceed a minute.
+
+    // This if statement allows for the a "0" to appear in the string when the variable is below 10
+  if (fullTimeSeconds < 10){
+    fullTimeSeconds = "0"+fullTimeSeconds
+  }
+
+    // Sending the strings into the HTML
+  document.getElementById("fullMinute").innerHTML = fullTimeMinutes;
+  document.getElementById("fullSecond").innerHTML = fullTimeSeconds;
+
+  // console.log (fullTimeMinutes, fullTimeSeconds);
+
 });
 
 // some mobile devices won't fire a loadedmetadata event so we need a fallback to make sure the attribute is set in these cases - we 
@@ -105,6 +128,7 @@ videoElement.addEventListener('timeupdate', () => {
   // this statement is simple - we update the progress bar's value attribute with the currentTime property of the video, because timeupdate runs everytime
   // currentTime is changed it'll update both as the video plays and if we were to skip or stop the video
   progressBar.value = videoElement.currentTime;
+timeStamp() // Triggering the timestamp function
 });
 
 // the simplest version of scrubbing would be to update the video's currentTime when the user clicks the timeline - however due to the interaction pattern 
@@ -148,7 +172,36 @@ progressBar.addEventListener('mousedown', (e) => {
 });
 
 
+// Mute & Unmute
 
+function muteUnmute (){
+  // SHORT METHOD (with no feedback) = = = = videoElement.mutued = !videoElement.muted;
+  if(videoElement.muted){
+    videoElement.muted = false;
+    muteButton.style.backgroundImage = "url('./icons/mute.svg')";     
+  } else {
+    videoElement.muted = true;
+    muteButton.style.backgroundImage = "url('./icons/unmute.svg')";
+  }
+}
+
+muteButton.addEventListener("click", muteUnmute);
+
+function timeStamp(){
+
+  currentTimeMinutes = Math.floor(videoElement.currentTime / 60); // Obtain the current time from the video element, then converting it from seconds to minutes.
+  currentTimeSeconds = Math.round(videoElement.currentTime) - currentTimeMinutes*60; // Obtain the current time, round it so there aren't decimals, then subtact the extra values so that the seconds don't exceed a minute.
+
+
+  // This if statement allows for the a "0" to appear in the string when the variable is below 10
+  if (currentTimeSeconds < 10){ 
+    currentTimeSeconds = "0"+currentTimeSeconds
+  }
+
+  // Sending the strings into the HTML
+  document.getElementById("currentMinute").innerHTML = currentTimeMinutes;
+  document.getElementById("currentSecond").innerHTML = currentTimeSeconds;
+}
 
 /* HELPER FUNCTIONS */
 
