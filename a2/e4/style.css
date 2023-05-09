@@ -2,18 +2,21 @@
   box-sizing: border-box;
   background-origin: border-box;
   margin: 0;
+  font-family: "indivisible", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
 /* https://lospec.com/palette-list/1bit-monitor-glow */
 /* you're welcome to change the colours if you want or any of the other general page style */
 :root{
-  --col-01:#222323;
-  --col-02:#f0f6f0;
-  --col-03:#5252ff;
-  --col-04:#b6e878;
-  --col-05:#bcbdbc;
-  --col-06:#6f6f6f;
+  --col-01:#0F172A; /* 222323 */
+  --col-02:#F1F5F9; /* f0f6f0 */
+  --col-03:#1E293B; /* 5252ff */
+  --col-04:#b6e878; /* This colour isn't used? */
+  --col-05:#94A3B8; /* bcbdbc */
+  --col-06:#475569; /* 6f6f6f */
   --border: 1px solid var(--col-02);
 }
 
@@ -86,8 +89,12 @@
   background-image: url('./icons/mute.svg');
 }
 
+/* The container for the timestamp element. */
 #timeContainer{
   width: 5rem;
+  text-align: right;
+  width: fit-content;
+  padding-left: 1rem;
 }
 
 .video-progress-bar{
