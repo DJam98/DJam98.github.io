@@ -10,6 +10,7 @@ let muteButton = document.getElementById("muteButton");
 // the progress element
 let progressBar = document.getElementById("progressBar");
 
+// Define the values for the timecode so that functions work.
 let fullTimeSeconds = 0;
 let fullTimeMinutes = 0;
 let currentTimeSeconds = 0;
