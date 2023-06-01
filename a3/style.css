@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    background-origin: border-box;
+    margin: 0;
+    overflow: hidden;
+}
+
+main {
+    position: absolute;
+    padding: 2vw;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10%;
+
+    background-color: grey;;
+    width: 100vw;
+    height: 100vh;
+    
+    text-align: center;
+    color: white;
+
+}
+
+header{
+    flex-grow: 2;
+    width: 100%;
+    background-color: blueviolet;
+    height: 15%;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 40px;
+
+}
+
+section{
+    flex-grow: 1;
+    width: 30%;
+    height: 25%;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 30px;
+
+}
+
+#Happy{
+    background-color: yellow;
+}
+
+#Creative{
+    background-color: green;
+}
+
+#Passionate{
+    background-color: red;
+}
+
+#Melancholic{
+    background-color: blue;
+}
+
+span{
+    width: 100%;
+}

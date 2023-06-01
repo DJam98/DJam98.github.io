@@ -1,0 +1,1 @@
+Alongside the interaction your web page should include 500 words (text, audio or video) discussing your specific design decisions, citing sources where appropriate. You can include additional elements on the page but your focus should be on creating a central interaction that demonstrates a clear relationship to your chosen adjective/principle pairing.
