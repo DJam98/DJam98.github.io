@@ -14,7 +14,7 @@ main {
     align-items: center;
     gap: 10%;
 
-    background-color: grey;
+    background-image: linear-gradient(to bottom right, #686FAB, #EFCCFF);
     width: 100vw;
     height: 100vh;
     
@@ -36,6 +36,10 @@ main {
     display: none;
 }
 
+#Back:hover{
+    cursor: pointer;
+}
+
 .house{
     width: 4vw;
     filter: invert(1);
@@ -48,7 +52,7 @@ main {
 header{
     flex-grow: 2;
     width: 100%;
-    background-color: blueviolet;
+    /* background-image: linear-gradient(to bottom right, #686FAB, #EFCCFF); */
     height: 15%;
 
     display: flex;
@@ -56,6 +60,7 @@ header{
 
     font-size: 40px;
     font-weight: 500;
+    border-radius: 10px;
 }
 
 section{
@@ -68,13 +73,14 @@ section{
     align-items: center;
 
     font-size: 30px;
-    -webkit-text-stroke: 1px;
+    -webkit-text-stroke: 0.4px;
     -webkit-text-stroke-color: rgb(167, 167, 167);
 }
 
 section:hover{
     width: 40%;
     height: 30%;
+    cursor: pointer;
 }
 
 #Happy{

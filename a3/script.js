@@ -5,16 +5,27 @@ const sadBox = document.getElementById('Melancholic');
 const topBox = document.getElementById('Top');
 const mainBox = document.getElementById('Main');
 const back = document.getElementById('Back');
+const happyMusic = document.getElementById('HappyMusic');
+const creativeMusic = document.getElementById('CreativeMusic');
+const passionMusic = document.getElementById('PassionMusic');
+const sadMusic = document.getElementById('SadMusic');
 
 happyBox.addEventListener('click', (e) => {
     creativeBox.style.display = "none";
     passionBox.style.display = "none";
     sadBox.style.display = "none";
     topBox.style.display = "none";
+
     mainBox.style.padding = 0;
     happyBox.style.height = "100vh";
     happyBox.style.borderRadius = 0;
     back.style.display = "inline";
+
+    if (happyMusic.paused) {
+        happyMusic.play();
+      } else {
+        happyMusic.pause();
+      }
 })
 
 creativeBox.addEventListener('click', (e) => {
@@ -22,11 +33,17 @@ creativeBox.addEventListener('click', (e) => {
     passionBox.style.display = "none";
     sadBox.style.display = "none";
     topBox.style.display = "none";
+
     mainBox.style.padding = 0;
     creativeBox.style.height = "100vh"
     creativeBox.style.borderRadius = 0;
     back.style.display = "inline";
 
+    if (creativeMusic.paused) {
+        creativeMusic.play();
+      } else {
+        creativeMusic.pause();
+      }
 })
 
 passionBox.addEventListener('click', (e) => {
@@ -34,11 +51,17 @@ passionBox.addEventListener('click', (e) => {
     happyBox.style.display = "none";
     sadBox.style.display = "none";
     topBox.style.display = "none";
+
     mainBox.style.padding = 0;
     passionBox.style.height = "100vh";
     passionBox.style.borderRadius = 0;
     back.style.display = "inline";
 
+    if (passionMusic.paused) {
+        passionMusic.play();
+      } else {
+        passionMusic.pause();
+      }
 })
 
 sadBox.addEventListener('click', (e) => {
@@ -46,10 +69,17 @@ sadBox.addEventListener('click', (e) => {
     passionBox.style.display = "none";
     happyBox.style.display = "none";
     topBox.style.display = "none";
+
     mainBox.style.padding = 0;
     sadBox.style.height = "100vh";
     sadBox.style.borderRadius = 0;
     back.style.display = "inline";
+
+    if (sadMusic.paused) {
+        sadMusic.play();
+      } else {
+        sadMusic.pause();
+      }
 })
 
 back.addEventListener('click', (e) => {
@@ -72,4 +102,9 @@ back.addEventListener('click', (e) => {
     sadBox.style.borderRadius = "10px";
 
     back.style.display = "none";
+
+    happyMusic.pause();
+    creativeMusic.pause();
+    passionMusic.pause();
+    sadMusic.pause();
 })
