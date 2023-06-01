@@ -52,7 +52,6 @@ main {
 header{
     flex-grow: 2;
     width: 100%;
-    /* background-image: linear-gradient(to bottom right, #686FAB, #EFCCFF); */
     height: 15%;
 
     display: flex;
@@ -85,25 +84,25 @@ section:hover{
 
 #Happy{
     display: flex;
-    background: url("/a3/img/happy.png");
+    background: url("/a3/img/happy.png") repeat;
     background-size: 100vw;
 }
 
 #Creative{
     display: flex;
-    background: url("/a3/img/creative.png");
+    background: url("/a3/img/creative.png") repeat;
     background-size: 100vw;
 }
 
 #Passionate{
     display: flex;
-    background: url("/a3/img/passion.png");
+    background: url("/a3/img/passion.png") repeat;
     background-size: 100vw;
 }
 
 #Melancholic{
     display: flex;
-    background: url("/a3/img/sad.png");
+    background: url("/a3/img/sad.png") repeat;
     background-size: 100vw;
 }
 

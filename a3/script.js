@@ -1,3 +1,4 @@
+// Assign all of the elements I'm changing to variables
 const happyBox = document.getElementById('Happy');
 const creativeBox = document.getElementById('Creative');
 const passionBox = document.getElementById('Passionate');
@@ -10,6 +11,9 @@ const creativeMusic = document.getElementById('CreativeMusic');
 const passionMusic = document.getElementById('PassionMusic');
 const sadMusic = document.getElementById('SadMusic');
 
+// Events to occur when the 'Happy' box is clicked.
+// A quick summary is that it allows the div to become full screen and play the music.
+// This is then also applied to the next three 'click' events as well, just changing which div becomes big.
 happyBox.addEventListener('click', (e) => {
     creativeBox.style.display = "none";
     passionBox.style.display = "none";
@@ -82,6 +86,7 @@ sadBox.addEventListener('click', (e) => {
       }
 })
 
+// This resets everything back to initial state that was changed.
 back.addEventListener('click', (e) => {
     happyBox.style.display = "flex";
     creativeBox.style.display = "flex"; 
@@ -107,4 +112,25 @@ back.addEventListener('click', (e) => {
     creativeMusic.pause();
     passionMusic.pause();
     sadMusic.pause();
+})
+
+// This all provides the hover animation for the background element for each box.
+happyBox.addEventListener("mousemove", function (e){
+    happyBox.style.backgroundPositionX = -e.offsetX * 0.5 + "px";
+    happyBox.style.backgroundPositionY = -e.offsetY * 0.5 + "px";
+})
+
+creativeBox.addEventListener("mousemove", function (e){
+    creativeBox.style.backgroundPositionX = -e.offsetX * 0.5 + "px";
+    creativeBox.style.backgroundPositionY = -e.offsetY * 0.5 + "px";
+})
+
+passionBox.addEventListener("mousemove", function (e){
+    passionBox.style.backgroundPositionX = -e.offsetX * 0.5 + "px";
+    passionBox.style.backgroundPositionY = -e.offsetY * 0.5 + "px";
+})
+
+sadBox.addEventListener("mousemove", function (e){
+    sadBox.style.backgroundPositionX = -e.offsetX * 0.5 + "px";
+    sadBox.style.backgroundPositionY = -e.offsetY * 0.5 + "px";
 })
