@@ -14,13 +14,35 @@ main {
     align-items: center;
     gap: 10%;
 
-    background-color: grey;;
+    background-color: grey;
     width: 100vw;
     height: 100vh;
     
     text-align: center;
     color: white;
+    font-family: grenadine-mvb, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
 
+#Back{
+    width: 5vw;
+    height: 5vw;
+    padding: 0.5vw;
+    fill: white;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+    display: none;
+}
+
+.house{
+    width: 4vw;
+    filter: invert(1);
+}
+
+.house:hover {
+    filter: none;
 }
 
 header{
@@ -33,35 +55,50 @@ header{
     align-items: center;
 
     font-size: 40px;
-
+    font-weight: 500;
 }
 
 section{
     flex-grow: 1;
     width: 30%;
     height: 25%;
+    border-radius: 10px;
 
     display: flex;
     align-items: center;
 
     font-size: 30px;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: rgb(167, 167, 167);
+}
 
+section:hover{
+    width: 40%;
+    height: 30%;
 }
 
 #Happy{
-    background-color: yellow;
+    display: flex;
+    background: url("/a3/img/happy.png");
+    background-size: 100vw;
 }
 
 #Creative{
-    background-color: green;
+    display: flex;
+    background: url("/a3/img/creative.png");
+    background-size: 100vw;
 }
 
 #Passionate{
-    background-color: red;
+    display: flex;
+    background: url("/a3/img/passion.png");
+    background-size: 100vw;
 }
 
 #Melancholic{
-    background-color: blue;
+    display: flex;
+    background: url("/a3/img/sad.png");
+    background-size: 100vw;
 }
 
 span{
